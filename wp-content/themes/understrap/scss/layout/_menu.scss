@@ -1,0 +1,16 @@
+.menu {
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  user-select: none;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out, z-index 0s 0.35s, visibility 0s 0.35s;
+  &.menu-is-active {
+    z-index: $index-top;
+    visibility: visible;
+    opacity: 1;
+    user-select: auto;
+    pointer-events: auto;
+    transition: opacity 0.3s 0s ease-in-out, z-index 0s, visibility 0s;
+  }
+}

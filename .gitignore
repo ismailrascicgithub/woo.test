@@ -1,0 +1,45 @@
+# repo/vendor/packages stuff
+# vendor/
+node_modules/
+
+# files
+*.log
+*.zip
+
+#package managers stuff
+package-lock.json
+composer.lock
+
+# OS stuff
+ehthumbs.db
+Thumbs.db
+.DS_Store
+
+# IDEs stuff
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+.vscode/
+
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/cache/autoptimize/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wp-cache-config.php
+wp-config.php
+wp-config.environments.php
+wp-config.development.php
+wp-config.staging.php
+wp-config.production.php
+wp-config-sample.php
+wp-config.backup.php
+
+wp-content/languages/
+
+# Teos stuff
+wp-content/themes/understrap/merge-wordpress.sh
+.ionide

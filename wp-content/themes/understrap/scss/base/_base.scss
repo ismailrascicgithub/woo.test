@@ -1,0 +1,73 @@
+/* html & body */
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  &.loading * {
+    transition: none !important;
+  }
+  &.overflow-hidden {
+    overflow: hidden;
+  }
+  &.small-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+}
+
+/* All */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Links */
+
+a {
+  color: $black;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  &:hover {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+/* Text */
+
+b,
+strong {
+  // font-family: 'Arial-Bold';
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --header-color: #{$white};
+  --header-background: #{$black};
+
+  // Header
+  @each $breakpoint, $height in $header-heights {
+    @include breakpoint-up($breakpoint) {
+      --header-height: #{$height};
+    }
+  }
+
+  // Vh
+  --vh: 1vh;
+}

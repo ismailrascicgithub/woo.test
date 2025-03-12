@@ -1,0 +1,75 @@
+/* Base button style */
+
+button {
+  padding: 0;
+  background-color: #0000;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+.btn-primary,
+.link-primary {
+  display: block;
+  padding: 10px 15px;
+  font-size: 1rem;
+  line-height: 1rem;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.45s ease-in-out;
+  @include breakpoint-up(sm) {
+    padding: 15px 25px;
+  }
+}
+
+/* Menu button */
+
+.btn-menu {
+  opacity: 1;
+  position: relative;
+  height: 24px;
+  width: 30px;
+  transition: opacity 1s ease-in-out;
+  span {
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    transition: all .15s ease-in-out;
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:nth-child(3) {
+      bottom: 0;
+    }
+  }
+}
+
+header.menu-is-active .btn-menu {
+  span {
+    background-color: #fff;
+  }
+  span:nth-child(1) {
+    top: 11px;
+    transform: rotate(-45deg);
+  }
+  span:nth-child(2) {
+    opacity: 0;
+  }
+  span:nth-child(3) {
+    top: 11px;
+    bottom: auto;
+    transform: rotate(-135deg);
+  }
+}

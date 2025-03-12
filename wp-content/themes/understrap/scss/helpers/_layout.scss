@@ -1,0 +1,153 @@
+/* Grid */
+.grid {
+  display: grid;
+}
+
+.grid-5-5 {
+  grid-template-columns: 1fr;
+  @include breakpoint-up(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@for $i from 0 through 40 {
+  @if $i <= 16 or $i % 5 == 0 {
+    .gap-#{$i} {
+      gap: $base-padding * $i;
+    }
+  }
+}
+
+/* Flex */
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+/* Justify content */
+
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+/* Align items */
+
+.items-start {
+  align-items: flex-start;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-center {
+  align-items: center;
+}
+.items-baseline {
+  align-items: baseline;
+}
+.items-stretch {
+  align-items: stretch;
+}
+
+/* Square holder */
+
+.square-holder {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+
+  .square-content {
+    &img {
+      object-fit: cover;
+      object-position: bottom;
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+/* Height & width */
+
+.h-full {
+  height: 100%;
+}
+.h-half {
+  height: 50%;
+}
+.mh-half {
+  max-height: 50%;
+}
+
+.w-full {
+  width: 100%;
+}
+.w-half {
+  width: 50%;
+}
+
+// Max width
+
+.max-w-half {
+  max-width: 50%;
+}
+.max-w-container {
+  max-width: $container-max-width;
+}
+
+.max-w-none {
+  max-width: none;
+}
+
+@for $i from 1 through 12 {
+  .max-w-#{$i}00 {
+    max-width: #{$i}00px;
+  }
+}
+
+// Max height
+
+.max-h-half {
+  max-height: 50%;
+}
+
+.max-h-470 {
+  max-height: 470px;
+}
+
+
+@for $i from 1 through 10 {
+  .max-h-#{$i}00 {
+    max-height: #{$i}00px;
+  }
+}

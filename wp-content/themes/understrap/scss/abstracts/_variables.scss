@@ -1,0 +1,91 @@
+/* WP */
+
+// $theme-path: "/../../wp-content/themes/understrap";
+// $theme-path2: "/wp-content/themes/understrap";
+
+/* Color */
+
+$black: #222222;
+$white: #fff;
+$gray-light: #f4f4f4;
+$gray-mid: #dadada;
+$gray-dark: #aba9a4;
+
+$colors: (
+  "white" $white,
+  "black" $black,
+  "gray-light" $gray-light,
+  "gray-mid" $gray-mid,
+  "gray-dark" $gray-dark
+);
+
+/* Container */
+
+$container-max-width: 2000px;
+$container-inner-max-width: 1000px;
+
+$container-py-xss: 30px;
+$container-py-xs: 40px;
+$container-py-sm: 50px;
+$container-py-md: 60px;
+$container-py-lg: 80px;
+$container-py-xl: 100px;
+$container-py-xxl: 120px;
+
+$container-px-xss: 26px;
+$container-px-xs: 30px;
+$container-px-sm: 50px;
+$container-px-md: 64px;
+$container-px-lg: 50px;
+$container-px-xl: 115px;
+$container-px-xxl: 150px;
+
+$inner-px-xss: 8px;
+$inner-px-xs: 13px;
+$inner-px-sm: 20px;
+$inner-px-md: 30px;
+$inner-px-lg: 30px;
+$inner-px-xl: 35px;
+$inner-px-xxl: 50px;
+
+$container-paddings: (
+  "xxs" $container-py-xss $container-px-xss $inner-px-xss,
+  "xs" $container-py-xs $container-px-xs $inner-px-xs,
+  "sm" $container-py-sm $container-px-sm $inner-px-sm,
+  "md" $container-py-md $container-px-md $inner-px-md,
+  "lg" $container-py-lg $container-px-lg $inner-px-lg,
+  "xl" $container-py-xl $container-px-xl $inner-px-xl,
+  "xxl" $container-py-xxl $container-px-xxl $inner-px-xxl
+);
+
+/* Breakpoints */
+
+// xss - sm ... mobile
+// sm - lg ... tablet
+// lg - ... desktop
+
+$screen-breakpoints: ("xxs" : 0, "xs" : 375px, "sm" : 576px, "md" : 768px, "lg" : 1080px, "xl" : 1400px, "xxl" : 1920px);
+
+/* Padding */
+
+$base-padding: 0.25rem;
+
+/* Header */
+
+// Header height
+
+$header-height-xxs: 60px;
+$header-height-lg: 100px;
+$header-height-xxl: 150px;
+
+$header-heights: (
+  "xxs" $header-height-xxs,
+  "lg" $header-height-lg,
+  "xxl" $header-height-xxl
+);
+
+/* Z-index */
+
+$index-top: 9999;
+$index-mid: 5000;
+$index-bottom: 1000;

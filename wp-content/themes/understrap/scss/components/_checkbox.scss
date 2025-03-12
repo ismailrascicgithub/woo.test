@@ -1,0 +1,89 @@
+.checkbox-holder {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  
+  .checkbox-input {
+    position: relative;
+    flex: 0 0 20px;
+    input {
+      position: absolute;
+      display: block;
+      opacity: 0;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      margin-top: inherit;
+      cursor: pointer;
+      &:checked + .faux-checkbox svg {
+        transform: scale(1);
+      }
+    }
+    .faux-checkbox {
+      display: block;
+      width: 18px;
+      height: 18px;
+      background-color: $black;
+      border-radius: 3px;
+      pointer-events: none;
+      user-select: none;
+    }
+    svg {
+      transform: scale(0);
+      margin: 2px;
+    }
+    .check-stroke {
+      stroke: #fff;
+    }
+  }
+  .checkbox-text {
+    flex: 0 1 calc(100% - 30px);
+    margin: 0;
+    text-align: left;
+    line-height: 20px;
+    p {
+      padding-left: 10px;
+      margin: 0;
+    }
+  }
+}
+
+
+/* <label class="checkbox-holder pt-3">
+
+<div class="checkbox-input">
+  <input
+    id="checkbox-terms"
+    type="checkbox"
+    class="checkbox"
+    name="terms"
+  >
+
+  <!-- Check icon -->
+  <div class="faux-checkbox">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        class="check-stroke"
+        fill="none"
+        stroke-width="3"
+        d="M1.73 12.91l6.37 6.37L22.79 4.59"
+      ></path>
+    </svg>
+  </div>
+</div>
+
+<div class="checkbox-text">
+  <p>
+    Strinjam se s <a href="#">splošnimi pogoji poslovanja</a>
+  </p>
+</div>
+
+</label> */
