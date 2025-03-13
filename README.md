@@ -25,6 +25,9 @@ This project is a test assignment built on WordPress using the UnderStrap theme.
   - Updating the URL to preserve filter values.
   - Listening to browser navigation events (popstate) to update filters accordingly.
 
+- **_home.scss && _header.scss**  
+  Contains simple styles
+  
 ## How It Works
 
 1. **Dynamic Product Display**  
